@@ -1,0 +1,732 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  position: relative;
+}
+
+/*FOOTER*/
+.footer {
+  flex: 0 0 auto;
+}
+.footer{
+  background-color: #ababff;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  flex: 0 0 auto;
+}
+.footer p{
+  margin-top: 20px;
+  color: black;
+  font-family: "Gothic", sans-serif;
+}
+.footer a{
+  text-decoration:none;
+  font-family: 'Gothic', sans-serif; 
+  margin-top: 5px;
+  size: 10px    color: black;
+  }
+
+/*HEADER*/
+body{
+  background-attachment: fixed;
+}
+.headrburger {
+  display: none;
+}
+.headr {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+.headr::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 2;
+}
+.containers {
+  max-width: 1180px;
+  margin: 0px auto;
+  padding: 0px 10px;
+}
+.headrbody {
+  position: relative;
+  display: flex;
+  justify-content: space-between; 
+  height: 80px;
+  align-items: center;
+}
+.headrlogo {
+  flex: 0 0 200px;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+.headrlogo img{
+  max-width: 100%;
+  display: block;
+}
+
+.headrlist{
+  text-align: center;
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+.headrlist li{
+  list-style: none;
+  margin: 0px 0px 0px 20px;
+}
+.headrlink {
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.headrlist li a:hover { color: #ababff; }
+.submenu li a:hover{
+  color:black;
+
+}
+.submenu {
+  background: #ababff;
+  position: absolute;
+  left:0;
+  top: 90%;
+  z-index: 5;
+  width: 660px;
+  opacity: 0;
+  text-align: left;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: .5s ease-in-out;
+}
+.submenu a {
+  color: white;
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 17px;
+  border-bottom: 3px solid rgba(255,255,255,.1);
+}
+.submenu li:last-child a { border-bottom: none; }
+.submenu li{
+    float: left;
+    position: relative;
+}
+.submenu li>ul{
+    position: absolute;
+    top: 50px;;
+    display: none;
+}
+.submenu li:hover>ul{
+    display: block;
+    width: 250px;
+}
+.submenu li:hover >ul>li{
+    float: none;
+}
+.headrlist > li:hover .submenu {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.headrlist a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  line-height: 110px;
+  padding-left: 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: 'Century Gothic', sans-serif;
+  font-weight: bold;
+  color: white;
+  transition:.3s linear;
+}
+/*SLAIDER*/
+.gallery{
+  position: relative;
+    width: 1200px;
+    text-align: center;
+    margin: 85px 0 0 160px ; 
+}
+
+.photo{
+    position: relative;
+    width: 100%;
+    
+}
+
+.photo img{
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    transition: opacity 3s;
+}
+
+.photo img.shown{
+     opacity: 1;
+}
+
+.prv_b, .nxt_b{
+position:absolute;
+top:0;
+display:block;
+width:150px;
+height:670px;
+cursor:pointer;
+}
+.prv_b:hover, .nxt_b:hover{opacity:.6;}
+.prv_b{
+left:0;
+background: no-repeat;
+}
+.nxt_b{
+right:0;
+background: no-repeat;
+}
+/*LINE*/
+.title{
+  padding: 700px 0 0 0;
+    text-align: center;
+}
+
+.title h2 {
+    color: #FFF;
+    display: inline-block;
+    font-size: 24px;
+    overflow: hidden;
+}
+
+.title h2:before,
+.title h2:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2px;
+    background: #ccc;
+    border: solid #ccc;
+    border-width: 0 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+h2{
+   font-family: 'Century Gothic', sans-serif;
+}
+.title h2:before {
+    margin-left: -100%;
+}
+
+.title h2:after {
+    margin-right: -100%;
+}
+/*CONTENT*/
+
+.content {
+  flex: 1 0 auto;
+  margin: 25px 100px 100px 120px; 
+}
+
+.box{
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom:  20px;
+  vertical-align: top;
+  margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
+  width: 311px;
+  font-family: 'Century Gothic', sans-serif;
+  text-align: center;
+}
+.box a{
+  text-decoration: none; 
+}
+.movlist{
+  width: 100%
+}
+.movlist2{
+  margin-top: 90px;
+}
+.poster_img {
+  height: 325px;
+  width: 245px;
+  margin-left: 32px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.poster_title{
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+}
+
+/*MATRIX*/
+.video{
+  width: 100%;
+  height: 450px;
+}
+
+.description{
+  font-family: 'Verdana', sans-serif;
+  position: relative;
+  margin-top: 110px;
+  color: white;
+  text-align: justify;
+  height: 900px;
+}
+.description h2{
+  text-align: center;
+  color:white;
+  margin-bottom: 35px;
+}
+.discr_poster_img{
+  height: 375px;
+  width: 295px;
+  float: left;
+  margin-bottom: 20px;
+}
+.descr{
+  width: 295px;
+}
+.und{
+  margin-bottom: 10px;
+}
+#und{
+  color: #a0a0fe;
+}
+.film-content{
+  position: flex;
+  width: 900px;
+  margin: -700px 0 0 340px;
+  font-family: 
+}
+.kp-rate,
+.imdb-rate {
+  display: inline-block;
+  float: left;
+  font-weight: 700;
+  color: white;
+  float: right;
+}
+
+.imdb-rate {
+  margin-right: 12px;
+}
+
+.kp-rate:before,
+.imdb-rate:before {
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 3px;
+  padding: 2px 5px 0 5px;
+  font-weight: 400;
+  content: attr(data-label);
+  color: white;
+}
+.kp-rate:before {
+  background-color: #F60;
+  color: #FFF;
+}
+
+.imdb-rate:before {
+  background-color: #02acd3;
+  color: #fff;
+}
+
+/*CARTOONS*/
+.button a, 
+.button2 a{
+  color: black; /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  font-family: 'Century Gothic', sans-serif;
+}
+.buttons{
+  display: inline-block;
+}
+.button{
+  background: #ababff; /* фон кнопки */
+  padding: .7em 1.5em; /* отступ от текста */
+  outline: none; /* убирать контур в Mozilla */
+  height: 25px;
+  width: 50px; 
+  margin-top: 30px; 
+  margin-left: 540px;
+}
+#bt2{
+  margin-left: 660px; 
+}
+.button2{
+  background: #ababff; /* фон кнопки */
+  padding: .7em 1.5em; /* отступ от текста */
+  outline: none; /* убирать контур в Mozilla */
+  height: 25px;
+  width: 50px; 
+  margin-top:  30px
+  margin-left: 700px;
+}
+#page01 {
+  display: flex;
+}
+#page02{
+  display: flex;
+}
+#page03{
+  display: flex;
+}
+/*NEWS*/
+.anons-readmore a{
+  color:#ababab;
+  font-size:10pt;
+  padding-top:2px; 
+  float: right;
+  text-decoration-line: none;
+}
+.anons-date-new {
+  font:15px Arial;
+  color:#ababff;
+  float:right;
+  width:130px;
+  text-align:right;
+}
+.relative {
+  position:relative;
+  overflow:auto;
+}
+.shiftup10 {
+  padding-top:10px;
+}
+.clear {
+  display:block;
+  clear:both;
+  height:0;
+  font-size:0;
+  margin-bottom: 20px;
+}
+.anons-text {
+  font-size:15px;
+  color:white;
+  line-height:25px;
+  margin-left: 130px;
+  font-family: 'Arial';
+}
+.new{
+  color: white;
+  font-family: "Century Gothic", sans-serif;
+  text-align: center;
+}
+.newsimg {
+  border:solid 1px #ababff;
+  background:#ababff;
+  padding:3px;
+  margin-right:25px;
+}
+.nwtitle h3 a{
+  color: #ababff;
+  text-decoration: none;
+  font-family: "Century Gothic", sans-serif;
+}
+.nwtitle h3 a:hover{
+  color:;
+}
+.titlenew{
+  color: #ababff;
+  text-decoration: none;
+  font-family: "Century Gothic", sans-serif;
+}
+
+/*MEDIA*/
+@media (max-width: 767px){
+   .headrbody {
+    height: 50px;
+  }
+  .headrlogo{
+    flex: 0 0 100px;
+  }
+  .headrburger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+    margin-left: 50px;
+  }
+  .headrbody{
+    width: 100%;
+  }
+  .headrburger span{
+    position: absolute;
+    background-color: white;
+    left: 0px;
+    height: 2px;
+    top: 9px;
+    width: 100%;
+  }
+  .headrburger::before ,
+  .headrburger::after {
+    content: '';
+    background-color: white;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0px;
+  }
+  .headrburger::before {
+    bottom: 0;
+  }
+  .headrburger::after {
+    top: 0;
+  }
+  .headrmenu {
+    position: fixed;
+    top: -100%;
+    overflow: auto;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding: 70px 10px 20px 40px;
+    z-index: 0;
+  }
+  .active{
+    transition: all 0.3s ease 0s;
+  }
+  .headrmenu.active{
+    top: 0;
+    background-color: #ababff;
+    text-align: right;
+    height: 95px;
+  }
+  .contents.active{
+    padding: 275px 0px 0px 0px;
+  }
+  .headrburger.active span{
+    transform: scale(0);
+  }
+  .headrburger.active::before{
+    transform: rotate(45deg);
+    bottom: 9px;
+  }
+  .headrburger.active::after{
+    transform: rotate(-45deg);
+    top: 9px;
+  }
+  .headrlist li a:hover { 
+    color:black;
+  }
+  body.lock{
+    overflow: hidden;
+  }
+  .submenu{
+    display: none;
+  }
+}
+
+@media (max-width: 1400px){
+  .gallery{
+    max-width: 100%;
+    margin:85px 0  0 120px;
+  }
+  .prv_b, .nxt_b{
+    height: 600px;
+  }
+  .content{
+    margin:0 0 8% 4%;
+  }
+  .box{
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .movlist2{
+    margin-top: 105px;
+    margin-left: auto;
+    margin-right: 40px;
+  }
+  .title{
+    padding: 690px 0 0 0;
+  }
+  .poster_img{
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+  } 
+  .poster_title{
+    font-size: 17px;
+    color: white;
+  }
+  .poster_title strong{
+    float: left;
+    margin-left: 55px;
+    margin-right: 25px;
+  }
+  
+}
+@media (max-width: 1199px){
+  .gallery{
+    max-width: 100%;
+    margin:85px 0 0 0;
+  }
+  .prv_b, .nxt_b{
+    height: 550px;
+  }
+  .content{
+    margin:0 0 3% 8%;
+  }
+  .movlist2{
+    margin-top: 105px;
+    margin-left: auto;
+    margin-right: 40px;
+  }
+  .title{
+    padding: 690px 0 10px 0;
+  }
+  .poster_img{
+    width: 245px ;
+    height: 335px;
+    margin-left:25px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  .poster_title{
+    font-size: 16px;
+    color: white;
+    margin-top:  0px;
+  }
+  .box{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .button{
+    margin-left: 405px;
+  }
+  #bt2{
+    margin-left: 510px; 
+  }
+  .film-content{
+    width: 700px;
+  }
+}
+
+@media (max-width: 767px){
+  .gallery{
+    width:100%;
+    margin:35px 0 0 0;
+  }
+  .prv_b, .nxt_b{
+    height: 350px;
+  }
+  .title{
+    padding: 440px 0 0 0;
+  }
+  .poster_img{
+    width: 245px ;
+    height: 335px;
+    margin-left:25px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  .content{
+    margin: 0 0 3% 8%;
+  }
+  .movlist{
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  .movlist2{
+    margin-top: 105px;
+    margin-left: auto;
+    margin-right: 40px;
+  }
+  .box{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .poster_title{
+    font-size: 15px;
+    color: white;
+    margin-top:  0px;
+  }
+  .description{
+    height: 1100px;
+  }
+  .descr{
+    width: 100%;
+  }
+  .film-content{
+   position: flex;
+   width: 100%;
+   margin:0 0 0 0;
+  }
+  .kp-rate,
+  .imdb-rate {
+    display: inline-block;
+    float: left;
+    font-weight: 700;
+    margin-top: 25px;
+    color: white;
+  } 
+  .imdb-rate {
+    margin-right: 12px;
+  }
+
+  .kp-rate:before,
+  .imdb-rate:before {
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 3px;
+    padding: 2px 5px 0 5px;
+    font-weight: 400;
+    content: attr(data-label);
+    color: white;
+  }
+  .kp-rate:before {
+    background-color: #F60;
+    color: #FFF;
+  }
+  .und{
+   margin-left: 25px;
+  }
+  .imdb-rate:before {
+    background-color: #02acd3;
+    color: #fff;
+  }
+  .discr_poster_img{
+    height: 355px;
+    width: 275px;
+    margin-right: 15px;
+    padding-right:  15px;
+  }
+  .button{
+    margin-left: 225px;
+  }
+  #bt2{
+    margin-left: 320px; 
+  }
+}
+
+
