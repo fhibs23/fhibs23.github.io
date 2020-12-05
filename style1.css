@@ -263,6 +263,7 @@ h2{
 }
 .box a{
   text-decoration: none; 
+  margin-right:  20px;
 }
 .movlist{
   width: 100%
@@ -281,8 +282,11 @@ h2{
   font-size: 18px;
   color: white;
   margin-top: 20px;
+  margin-left: 45px;
 }
+.poster_title strong{
 
+}
 /*MATRIX*/
 .video{
   width: 100%;
@@ -459,12 +463,12 @@ h2{
 }
 
 /*MEDIA*/
-@media (max-width: 767px){
+@media (max-width: 768px){
    .headrbody {
     height: 50px;
   }
   .headrlogo{
-    flex: 0 0 100px;
+    flex: 0 0 200px;
   }
   .headrburger {
     display: block;
@@ -507,7 +511,7 @@ h2{
     left: 0;
     width: 100%;
     height: 50px;
-    padding: 70px 10px 20px 40px;
+    padding: 30px 10px 0 40px;
     z-index: 0;
   }
   .active{
@@ -544,7 +548,7 @@ h2{
   }
 }
 
-@media (max-width: 1400px){
+@media (max-width: 1441px) and (min-width: 1200px){
   .gallery{
     max-width: 100%;
     margin:85px 0  0 120px;
@@ -553,10 +557,9 @@ h2{
     height: 600px;
   }
   .content{
-    margin:0 0 8% 4%;
+    margin:0 0 6% 6%;
   }
   .box{
-    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
@@ -572,6 +575,7 @@ h2{
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 15px;
+    
   } 
   .poster_title{
     font-size: 17px;
@@ -579,12 +583,12 @@ h2{
   }
   .poster_title strong{
     float: left;
-    margin-left: 55px;
+    margin-left: 35px;
     margin-right: 25px;
   }
   
 }
-@media (max-width: 1199px){
+@media (max-width: 1200px) and (min-width: 991px) {
   .gallery{
     max-width: 100%;
     margin:85px 0 0 0;
@@ -593,7 +597,7 @@ h2{
     height: 550px;
   }
   .content{
-    margin:0 0 3% 8%;
+    margin:0 0 2% 8%;
   }
   .movlist2{
     margin-top: 105px;
@@ -631,7 +635,107 @@ h2{
   }
 }
 
-@media (max-width: 767px){
+@media (max-width: 992px) and (min-width: 768px) {
+  .gallery{
+    width:100%;
+    margin:35px 0 0 0;
+  }
+  .prv_b, .nxt_b{
+    height: 550px;
+  }
+  .title{
+    padding: 560px 0 0 0;
+  }
+  .poster_img{
+    width: 225px ;
+    height: 315px;
+    margin-left:25px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  .content{
+    margin: 0 0 1% 5%;
+  }
+  .movlist{
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  .movlist2{
+    margin-top: 105px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .box{
+    width: 300px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .poster_title{
+    font-size: 15px;
+    color: white;
+    margin-top:  0px;
+    margin-left: 20px; 
+  }
+  .description{
+    height: 1100px;
+  }
+  .descr{
+    width: 100%;
+  }
+  .film-content{
+   position: flex;
+   width: 100%;
+   margin:0 0 0 0;
+  }
+  .kp-rate,
+  .imdb-rate {
+    display: inline-block;
+    float: left;
+    font-weight: 700;
+    margin-top: 25px;
+    color: white;
+  } 
+  .imdb-rate {
+    margin-right: 12px;
+  }
+
+  .kp-rate:before,
+  .imdb-rate:before {
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 3px;
+    padding: 2px 5px 0 5px;
+    font-weight: 400;
+    content: attr(data-label);
+    color: white;
+  }
+  .kp-rate:before {
+    background-color: #F60;
+    color: #FFF;
+  }
+  .und{
+   margin-left: 25px;
+  }
+  .imdb-rate:before {
+    background-color: #02acd3;
+    color: #fff;
+  }
+  .discr_poster_img{
+    height: 355px;
+    width: 275px;
+    margin-right: 15px;
+    padding-right:  15px;
+  }
+  .button{
+    margin-left: 225px;
+  }
+  #bt2{
+    margin-left: 320px; 
+  }
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
   .gallery{
     width:100%;
     margin:35px 0 0 0;
@@ -643,14 +747,14 @@ h2{
     padding: 440px 0 0 0;
   }
   .poster_img{
-    width: 245px ;
-    height: 335px;
+    width: 215px ;
+    height: 305px;
     margin-left:25px;
     margin-right: 15px;
     margin-bottom: 15px;
   }
   .content{
-    margin: 0 0 3% 8%;
+    margin: 0 0 auto 8%;
   }
   .movlist{
     margin-left: auto;
@@ -662,6 +766,7 @@ h2{
     margin-right: 40px;
   }
   .box{
+    width: 300px;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
@@ -723,9 +828,220 @@ h2{
   }
   .button{
     margin-left: 225px;
+    margin-bottom: 20px;
   }
   #bt2{
     margin-left: 320px; 
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 576px) and (min-width: 375px) {
+  .gallery{
+   display: none;
+  }
+  .title{
+    padding: 60px 0 0 0;
+  }
+  .title h2{
+    font-size: 18px;
+  }
+  .poster_img{
+    width: 205px ;
+    height: 295px;
+    margin-left:25px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+  .content{
+    margin: 0 0 0 4%;
+  }
+  .movlist{
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  .movlist2{
+    margin-top: 105px;
+    margin-left: auto;
+    margin-right: 40px;
+  }
+  .box{
+    width: 250px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10px;
+  }
+  .poster_title{
+    font-size: 15px;
+    color: white;
+    margin-top:  0px;
+  }
+  .description{
+    height: 1100px;
+  }
+  .descr{
+    width: 100%;
+  }
+  .film-content{
+   position: flex;
+   width: 100%;
+   margin:0 0 0 0;
+  }
+  .kp-rate,
+  .imdb-rate {
+    display: inline-block;
+    float: left;
+    font-weight: 700;
+    margin-top: 25px;
+    color: white;
+  } 
+  .imdb-rate {
+    margin-right: 12px;
+  }
+
+  .kp-rate:before,
+  .imdb-rate:before {
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 3px;
+    padding: 2px 5px 0 5px;
+    font-weight: 400;
+    content: attr(data-label);
+    color: white;
+  }
+  .kp-rate:before {
+    background-color: #F60;
+    color: #FFF;
+  }
+  .und{
+   margin-left: 25px;
+  }
+  .imdb-rate:before {
+    background-color: #02acd3;
+    color: #fff;
+  }
+  .discr_poster_img{
+    height: 355px;
+    width: 275px;
+    margin-right: 15px;
+    padding-right:  15px;
+  }
+  .button{
+    margin-left: 155px;
+    margin-bottom: 20px;
+  }
+  #bt2{
+    margin-left: 255px; 
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 375px) and (min-width: 200px){
+  .gallery{
+    display: none;
+  }
+  .title{
+    padding: 65px 0 0 0;
+  }
+  .title h2{ 
+    font-size: 14px;
+  }
+  .poster_img{
+    width: 180px ;
+    height: 230px;
+    margin-left:0;
+    margin-right: 0;
+    margin-bottom: 0px;
+    margin-top: 0; 
+  }
+  .content{
+    margin: 0 0 0 0;
+  }
+  .movlist{
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  .movlist2{
+    margin-top: 105px;
+    margin-left: auto;
+    margin-right: 40px;
+  }
+  .box{
+    width: 180px;
+    text-align: center;
+    margin-right: 5%;
+    margin-left: 25%;
+    margin-bottom: 0px;
+  }
+  .box a{
+    margin: 0 0 0 0;
+  }
+  strong.poster_title {
+    margin-right:0;
+    margin-right: 0;
+  }
+  .poster_title{
+    font-size: 8px;
+    color: white;
+    margin-top:  0px;
+    margin-right:10px;
+    margin-left:0;
+  }
+  .description{
+    margin-left: 9%;
+    height: 1000px;
+  }
+  .descr{
+    width: 100%;
+  }
+  .film-content{
+    margin-left: 9%;
+   position: flex;
+   width: 100%;
+   margin:0 0 0 0;
+  }
+  .film-content p{
+    font-size: 10px;
+  }
+  .kp-rate,
+  .imdb-rate {
+    display: inline-block;
+    float: left;
+    font-weight: 700;
+    margin-left: 20px;
+    color: white;
+    font-size: 10px;
+  } 
+  .imdb-rate {
+    margin-right: 12px;
+  }
+
+  .kp-rate:before,
+  .imdb-rate:before {
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 3px;
+    padding: 2px 5px 0 5px;
+    font-weight: 400;
+    content: attr(data-label);
+    color: white;
+  }
+  .kp-rate:before {
+    background-color: #F60;
+    color: #FFF;
+  }
+  .und{
+   margin-left: 0;
+   font-size: 10px;
+  }
+  .imdb-rate:before {
+    background-color: #02acd3;
+    color: #fff;
+  }
+  .button{
+    margin-left: 70px;
+  }
+  #bt2{
+    margin-left: 170px; 
   }
 }
 
